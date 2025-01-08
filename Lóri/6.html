@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. feladat</title>
+
+    <style>
+        input
+        {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="number" id="szam">
+    <br>
+    <button onclick="gyokvonas()">Gyökvonás</button>
+    <br>
+    <input type="number" id="gyoke">
+    <script>
+
+        function gyokvonas()
+        {
+            let szam = document.getElementById("szam").value;
+
+            document.getElementById("gyoke").value = Math.sqrt(szam);
+        }
+        
+    </script>
+</body>
+</html>
