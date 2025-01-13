@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13.</title>
+</head>
+<body>
+    <div id="tombhelye"></div>
+    <div id="szamokOsszege"></div>
+    <script>
+        let huszSzam = [];
+
+        for (let i = 0;i < 20;i++)
+        {
+            huszSzam[i] = Math.floor(Math.random() * 100) + 1;
+        }
+
+        document.getElementById("tombhelye").innerHTML = huszSzam;
+
+        let szamlalo = 0
+
+        for (let i = 0;i < huszSzam.length;i++)
+        {
+            szamlalo+=huszSzam[i];
+        }
+
+        document.getElementById("szamokOsszege").innerHTML = szamlalo;
+
+
+    </script>
+</body>
+</html>
