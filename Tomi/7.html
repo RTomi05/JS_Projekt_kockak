@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papírlap (7)</title>
+    <style>
+        div{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="elso"></div>
+    <div id="masodik"></div>
+
+    <script>
+
+        //40*50
+
+        alert("Adjon meg két számot először a 40cm*50cm-es papírlaphoz.");
+
+        let elsoSzam = prompt("Adjon meg egy számot: ");
+        let masodikSzam = prompt("Adjon meg egy számot: ");
+
+        let elsoKapott = Math.floor(40 / elsoSzam);
+        let masodikKapott = Math.floor(50 / masodikSzam);
+
+        console.log(elsoKapott, masodikKapott);
+
+        let osszeg1 = elsoKapott * masodikKapott;
+        console.log("A kivágható darabok száma: ", osszeg1);
+        
+        //50*40
+
+        alert("Adjon meg két számot az 50cm*40cm-es papírlaphoz");
+
+        elsoSzam = prompt("Adjon meg egy számot: ");
+        masodikSzam = prompt("Adjon meg egy számot: ");
+
+        elsoKapott = Math.floor(50 / elsoSzam);
+        masodikKapott = Math.floor(40 / masodikSzam);
+
+        console.log(elsoKapott, masodikKapott);
+
+        let osszeg2 = elsoKapott * masodikKapott;
+        console.log("A kivágható darabok száma: ", osszeg2);
+
+
+        document.getElementById("elso").innerHTML = "A kivágható darabok száma a 40cm*50cm-es papírlapból: " + osszeg1 + " db.";
+        document.getElementById("masodik").innerHTML = "A kivágható darabok száma az 50cm*40cm-es papírlapból: " + osszeg2 + " db.";
+    </script>
+</body>
+</html>
