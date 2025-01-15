@@ -7,14 +7,14 @@
 </head>
 <body>
     <script>
-        function isPalindrome(szo)
+        function tukorszo(szo)
         {
             const kicsiSzo = szo.toLowerCase();
             
             return kicsiSzo === kicsiSzo.split('').reverse().join('');
         }
             const bekertSzo = prompt("Adj meg egy szót:");
-            if (isPalindrome(bekertSzo))
+            if (tukorszo(bekertSzo))
             {
             console.log(`A(z) "${bekertSzo}" tükörszó.`);
             }
