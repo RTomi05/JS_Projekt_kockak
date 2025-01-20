@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tükörszó-e? (15)</title>
 </head>
 <body>
     <script>
-        function isPalindrome(szo)
+        function tukorszo(szo)
         {
             const kicsiSzo = szo.toLowerCase();
             
             return kicsiSzo === kicsiSzo.split('').reverse().join('');
         }
             const bekertSzo = prompt("Adj meg egy szót:");
-            if (isPalindrome(bekertSzo))
+            if (tukorszo(bekertSzo))
             {
             console.log(`A(z) "${bekertSzo}" tükörszó.`);
             }
