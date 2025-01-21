@@ -7,37 +7,39 @@
 </head>
 <body>
 
-    <input type="number" id="tombhelye"><br>
-    <button onclick="tombrendezo()"></button>
+    <input type="text" id="tombhelye"><br>
+    <button onclick="tombRendezo()">Számok cseréje</button>
     <script>
-        let szamok = [22,10,34,23,456,765,210,567,84,53]
+        
 
 
-        function tombRendezo(tomb)
+        function tombRendezo()
         {
+            let szamok = [22,10,34,23,456,765,210,567,84,53]
             const hely = document.getElementById("tombhelye")
             let legnagyobb = 0; 
 
-            for(let i = 0;i < tomb.length;i++)
+            for(let i = 0;i < szamok.length;i++)
             {
-                if (tomb[i] > legnagyobb)
+                if (szamok[i] > legnagyobb)
                 {   
-                    legnagyobb = tomb[i];
+                    legnagyobb = szamok[i];
                 }
             }
 
-            for(let i = 0; i < tomb.length; i++)
+            for(let i = 0; i < szamok.length; i++)
             {
-                if(tomb[i] == legnagyobb)
+                if(szamok[i] == legnagyobb)
                 {   
-                    tomb[i] = -1;
+                    szamok[i] = -1;
                 }
             }
-            
+
+            hely.value = szamok;
         }
 
 
-        console.log(szamok)
+        
 
     </script>
 </body>
