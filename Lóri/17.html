@@ -7,6 +7,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
     <div id="legnagyobbHelye"></div>
     <input type="number" id="tombhelye" placeholder="Adj meg tíz számot!"><br>
     <button onclick="beker(szamok)">Submit</button><br>
@@ -52,6 +53,69 @@
             legnagyobbH.innerHTML= legnagyobbSzam;
         }
 
+=======
+
+    <div id="legnagyobbSzam"></div>
+    <input type="text" id="tombhelye"><br>
+    <button onload="aBekeres()">Submit</button>
+    <script>
+
+        function aBekeres()
+        {        
+            let szamok = []
+            const bekeresHely = document.getElementById("tombhelye");
+
+            while(szamok.length < 10)
+            {
+                szamok.push(bekeresHely.value);
+
+            }
+
+            console.log(szamok);
+        
+        }
+
+
+
+        /*
+        function legnagyobbKereses(tomb)
+        {
+            let legnagyobb = 0;
+            let index = 0;
+
+            for(let i = 0; i < tomb.length;i++)
+            {
+                if(tomb[i]> legnagyobb)
+                {
+                    legnagyobb= tomb[i];
+                    index = i;
+                }
+            }
+
+            return index;
+        }
+
+        
+
+        const hely = document.getElementById("legnagyobbSzam");
+        hely.innerHTML = szamok[legnagyobbKereses(szamok)]
+
+
+        for(let j = 0;j < szamok.length;j++)
+        {
+            for(let i = 0;i< szamok.length;i++)
+            {
+                if(i == legnagyobbKereses(szamok))
+                {
+                    szamok[i] = -1
+                }
+            }
+        }
+
+
+        console.log(szamok)
+        */
+>>>>>>> 332864bdb9e9c788b93ca8e56067264aa66abf79
         
 
     </script>
