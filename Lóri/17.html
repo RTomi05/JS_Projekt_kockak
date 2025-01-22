@@ -3,41 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13.</title>
+    <title>17.</title>
+
 </head>
 <body>
-
-    <input type="text" id="tombhelye"><br>
-    <button onclick="tombRendezo()">Számok cseréje</button>
+    <div id="legnagyobbHelye"></div>
+    <input type="number" id="tombhelye" placeholder="Adj meg tíz számot!"><br>
+    <button onclick="beker(szamok)">Submit</button><br>
+    <button onclick="tombRendezo()">Legnagyobb szám kiírása</button>
     <script>
-        
 
+        let szamok = [];
+        const bekeresH = document.getElementById("tombhelye");
+        const legnagyobbH = document.getElementById("legnagyobbHelye");
+        let index = 0;
+        let legnagyobbSzam = 0;
+
+        function beker(tomb)
+        {
+
+            tomb.push(bekeresH.value)
+            /*
+            for(let i = 0; i < 10;i++)
+            {
+                tomb[i] = bekeresH.value;
+            }
+            */
+            if(tomb.length == 10)
+            {
+                bekeresH.value = "Elérted a tíz számot"
+            }
+            console.log(tomb)
+        }
+
+        
 
         function tombRendezo()
         {
-            let szamok = [22,10,34,23,456,765,210,567,84,53]
-            const hely = document.getElementById("tombhelye")
-            let legnagyobb = 0; 
-
             for(let i = 0;i < szamok.length;i++)
             {
-                if (szamok[i] > legnagyobb)
-                {   
-                    legnagyobb = szamok[i];
+                if(szamok[i] > legnagyobbSzam)
+                {
+                    index = i;
+                    legnagyobbSzam = szamok[i];
                 }
             }
 
-            for(let i = 0; i < szamok.length; i++)
-            {
-                if(szamok[i] == legnagyobb)
-                {   
-                    szamok[i] = -1;
-                }
-            }
-
-            hely.value = szamok;
+            legnagyobbH.innerHTML= legnagyobbSzam;
         }
-
 
         
 
