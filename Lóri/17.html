@@ -17,25 +17,27 @@
         {
             let szamok = [22,10,34,23,456,765,210,567,84,53]
             const hely = document.getElementById("tombhelye")
-            let legnagyobb = 0; 
+            let legnagyobb = 0;
 
-            for(let i = 0;i < szamok.length;i++)
+            for (let i = 0;i < szamok.length;i++)
             {
-                if (szamok[i] > legnagyobb)
-                {   
-                    legnagyobb = szamok[i];
+                let index = 0
+                for(let i = 0;i < szamok.length;i++)
+                {
+                    if (szamok[i] > legnagyobb)
+                    {   
+                        legnagyobb = szamok[i];
+                        index = i
+                    }
                 }
+
+                szamok[index]=-1
             }
 
-            for(let i = 0; i < szamok.length; i++)
-            {
-                if(szamok[i] == legnagyobb)
-                {   
-                    szamok[i] = -1;
-                }
-            }
 
             hely.value = szamok;
+
+            console.log(szamok)
         }
 
 
