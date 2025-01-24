@@ -12,18 +12,26 @@
 		let szo2 = prompt("Adja meg a második szót: ").toLowerCase();
 
 
-		console.log(szo1, szo2);
+		console.log("Megadott szók: " + szo1 + " és " + szo2);
 		
 		function eldont()
 		{
-			let kis1 = szo1.split('').sort().join('');
-			let kis2 = szo2.split('').sort().join('');
-			console.log(kis1, kis2);
+			let kis1 = szo1.split('').sort();
+			let kis2 = szo2.split('').sort();
+			//console.log(kis2)
+
 
 			for (let i = 0; i < kis1.length; i++)
-				console.log(kis1[i]);
+			{
+				let counter = 0;
+				console.log(kis1,kis2)
+				if (kis1[i] == kis2[i])
+				{
+					console.log("A megadott szók anagrammák.")
+				}
+			}
 		}
-
+		
 		eldont()
 		
 		
