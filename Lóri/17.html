@@ -21,6 +21,8 @@
     <div id="legnagyobbHelye"></div>
     <script>
 
+        
+
         let szamok = [];
         const bekeresH = document.getElementById("tombhelye");
         const legnagyobbH = document.getElementById("legnagyobbHelye");
@@ -40,7 +42,7 @@
 
         function tombRendezo(tomb)
         {   
-            for(let j = 0;j < tomb.length;i++)
+            for(let j = 0;j < tomb.length;j++)
             {
                 for(let i = 0;i < tomb.length;i++)
                 {
@@ -53,11 +55,10 @@
 
 
                 tomb[legnagyobbindex] = -1;
-
-                console.log(tomb);
-            
                 legnagyobbH.innerHTML= legnagyobbSzam;
+
             }
+            console.log(tomb);
         }
     </script>
 </body>
