@@ -5,55 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>17.</title>
 
+    <style>
+        #bekeres
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div id="legnagyobbHelye"></div>
+    
     <input type="number" id="tombhelye" placeholder="Adj meg tíz számot!"><br>
-    <button onclick="beker(szamok)">Submit</button><br>
-    <button onclick="tombRendezo()">Legnagyobb szám kiírása</button>
+    <button onclick="beker()" id="bekeres">Submit</button><br>
+    <button onclick="tombRendezo(szamok)">Rendezés</button><br>
+    <div id="legnagyobbHelye"></div>
     <script>
 
         let szamok = [];
         const bekeresH = document.getElementById("tombhelye");
         const legnagyobbH = document.getElementById("legnagyobbHelye");
-        let index = 0;
+        let legnagyobbindex = 0;
         let legnagyobbSzam = 0;
 
-        function beker(tomb)
+        function beker()
         {
-
-            tomb.push(bekeresH.value)
-            /*
-            for(let i = 0; i < 10;i++)
+            if(szamok.length < 10)
             {
-                tomb[i] = bekeresH.value;
+                szamok.push(parseInt(bekeresH.value));
             }
-            */
-            if(tomb.length == 10)
-            {
-                bekeresH.value = "Elérted a tíz számot"
-            }
-            console.log(tomb)
+            console.log(szamok)
         }
 
         
 
-        function tombRendezo()
-        {
-            for(let i = 0;i < szamok.length;i++)
+        function tombRendezo(tomb)
+        {   
+            for(let j = 0;j < tomb.length;i++)
             {
-                if(szamok[i] > legnagyobbSzam)
+                for(let i = 0;i < tomb.length;i++)
                 {
-                    index = i;
-                    legnagyobbSzam = szamok[i];
+                    if(tomb[i] > legnagyobbSzam)
+                    {
+                        legnagyobbindex = i;
+                        legnagyobbSzam = tomb[i];
+                    }   
                 }
+
+
+                tomb[legnagyobbindex] = -1;
+
+                console.log(tomb);
+            
+                legnagyobbH.innerHTML= legnagyobbSzam;
             }
-
-            legnagyobbH.innerHTML= legnagyobbSzam;
         }
-
-        
-
     </script>
 </body>
 </html>
