@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+    <style>
+        div > img
+        {
+            height: 50%;
+            width:50%;
+        }
+
+        img{
+            height:400px;
+            width:400px;
+        }
+        body
+        {
+            background-color: rgb(78, 74, 74);
+        }
+
+    </style>
+</head>
+<body>
+    <img src="./pf1.jpg" alt="" id="kepN" onclick="Novelesala()">
+    <img src="./pf2.jpg" alt="" id="kepN" onclick="Novelesala()">
+    <img src="./pf3.jpg" alt="" id="kepN" onclick="Novelesala()">
+    <img src="./pf4.jpg" alt="" id="kepN" onclick="Novelesala()"><br>
+
+    <div id="kephelye"></div>
+</body>
+    <script>
+        
+        function Novelesala()
+        {
+            let hely = document.getElementById("kephelye");
+            hely.innerHTML = "";
+
+            
+            let kep = document.createElement("img");
+
+
+            //console.log(event);
+            kep.src=event.target.src
+
+            hely.appendChild(kep);
+        }
+        
+
+
+
+
+    </script>
+
+</html>

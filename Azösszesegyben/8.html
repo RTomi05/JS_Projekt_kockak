@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.feladat</title>
+
+    <style>
+        input[type="text"]{
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <input type="number" id="aOldal"><br>
+    <input type="number" id="bOldal"><br>
+    <input type="number" id="cOldal"><br>
+
+    <button onclick="vizsgalo()">Vizsgálat</button><br>
+
+    <input type="text" id="aKul"><br>
+    <input type="text" id="bKul"><br>
+    <input type="text" id="cKul"><br>
+
+    <script>
+        function vizsgalo()
+        {
+            let a = document.getElementById("aOldal").value;
+            let b = document.getElementById("bOldal").value;
+            let c = document.getElementById("cOldal").value;
+
+            let kerulet = a + b + c;
+
+            const keruletFele = kerulet/2;
+
+            if (a || b || c < keruletFele)
+            {
+                document.getElementById("aKul").value = `${keruletFele-a} különbség az a oldal és a kerület fele között `
+                document.getElementById("bKul").value = `${keruletFele-b} különbség a b oldal és a kerület fele között `
+                document.getElementById("cKul").value = `${keruletFele-c} különbség a c oldal és a kerület fele között `
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="osszeg"></p>
+    <p id="szorzat"></p>
+
+
+
+    <script>
+        const tokmindegy = []
+        
+
+        for (let i = 0; i < 5; i++)
+    {
+        let szam = Number(prompt("Adj meg egy számot!"))
+        tokmindegy.push(szam)
+    }
+
+    console.log(tokmindegy)
+
+    let osszeg=0
+    let szorzat=1
+
+    for (let i = 0; i < tokmindegy.length; i++)
+         {
+            osszeg += tokmindegy[i]
+        }
+
+    console.log(osszeg)
+
+    for (let i = 0; i < tokmindegy.length; i++)
+         {
+            szorzat *= tokmindegy[i]
+        }
+
+    console.log(szorzat)
+
+
+    let ossz=document.getElementById('osszeg').innerHTML="Az összeg: " + osszeg
+    let szor=document.getElementById('szorzat').innerHTML="A szorzat: " + szorzat
+
+
+    </script>
+    
+</body>
+</html>

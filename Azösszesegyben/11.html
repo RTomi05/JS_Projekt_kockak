@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+<body>
+    <input type="number" id="szam" placeholder="Kérek három számot!">
+    <button onclick="Bekeres()">Küldés</button>
+    <div id="szamokHelye"></div>
+
+    <script>
+
+    const bekeres = document.getElementById("szam");
+    let szamok = [];
+
+        function Bekeres()
+        {
+            let kattintas = 0;
+            if(szamok.length < 3)
+            {
+                szamok.push(parseInt(bekeres.value));
+            }
+            
+            console.log(szamok)
+
+
+            if(szamok.length==3)
+            {
+                let legnagyobb = 0;
+                let legkisebb = szamok[0];
+                const helye = document.getElementById("szamokHelye");
+
+                for(let i = 0; i < szamok.length;i++)
+                    {
+                        if(szamok[i] > legnagyobb)
+                        {
+                            legnagyobb = szamok[i];
+                        }
+                        if(szamok[i] < legkisebb)
+                        {
+                            legkisebb = szamok[i];
+                        } 
+                    }
+
+                
+                let osszeg = 0;
+                let atlag = 0;
+
+                for (let i = 0;i < szamok.length;i++)
+                {
+                    osszeg+=szamok[i];
+                }
+
+                atlag = osszeg/szamok.length;
+
+
+                helye.innerHTML= `Legnagyobb szám = ${legnagyobb}, Legkisebb szám= ${legkisebb}, Számok átlaga= ${atlag}`;
+                }
+        }
+
+    </script>
+</body>
+</html>

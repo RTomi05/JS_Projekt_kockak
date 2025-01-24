@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tükörszó-e? (15)</title>
+</head>
+<body>
+    <script>
+        function tukorszo(szo)
+        {
+            const kicsiSzo = szo.toLowerCase();
+            
+            return kicsiSzo === kicsiSzo.split('').reverse().join('');
+        }
+            const bekertSzo = prompt("Adj meg egy szót:");
+            if (tukorszo(bekertSzo))
+            {
+            console.log(`A(z) "${bekertSzo}" tükörszó.`);
+            let tukorSzo = "A bekért szó tükörszó."
+            }
+            else
+            {
+            console.log(`A(z) "${bekertSzo}" nem tükörszó.`);
+            }
+
+    </script>    
+</body>
+</html>

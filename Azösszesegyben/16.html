@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anagramma (16)</title>
+</head>
+<body>
+	<script>
+		alert("Adjon meg két szót, és a program eldönti, egymás anagrammái-e.")
+		let szo1 = prompt("Adja meg az első szót: ").toLowerCase();
+		let szo2 = prompt("Adja meg a második szót: ").toLowerCase();
+
+
+		console.log("Megadott szók: " + szo1 + " és " + szo2);
+		
+		function eldont()
+		{
+			let kis1 = szo1.split('').sort();
+			let kis2 = szo2.split('').sort();
+			//console.log(kis2)
+
+
+			for (let i = 0; i < kis1.length; i++)
+			{
+				let counter = 0;
+				console.log(kis1,kis2)
+				if (kis1[i] == kis2[i])
+				{
+					console.log("A megadott szók anagrammák.")
+				}
+			}
+		}
+		
+		eldont()
+		
+		
+
+	</script>
+</body>
+</html>
